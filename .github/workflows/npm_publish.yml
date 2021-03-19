@@ -21,8 +21,10 @@ jobs:
           node-version: 15
           registry-url: https://registry.npmjs.org/
       - run: npm install
+      - run: git config --global user.name "Marthe-ClemenceSARRAZIN"
+      - run: git config --global user.email "marthe-clemence.sarrazin@cellenza.com"
+      - run: npm version ${{ github.event.release.tag_name }}
       - run: npm run build
-      - run: npm version patch
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
