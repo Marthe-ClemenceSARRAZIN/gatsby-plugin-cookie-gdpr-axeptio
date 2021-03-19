@@ -33,9 +33,6 @@
     "babel-preset-gatsby-package": "^1.1.0",
     "cross-env": "^7.0.3"
   },
-  "publishConfig": {
-    "tag": "master-latest"
-  },
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",
     "prepare": "cross-env NODE_ENV=production npm run build",
