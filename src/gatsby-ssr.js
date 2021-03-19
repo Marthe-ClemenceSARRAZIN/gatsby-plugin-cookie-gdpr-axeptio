@@ -3,12 +3,9 @@
 const React = require('react')
 
 exports.onRenderBody = function({ setHeadComponents }, pluginsOptions) {
-  const activePlugin = (pluginsOptions.gtagIdentifiant !== '' 
-  || 
-  (pluginsOptions.axpetioIdentifiant !== '' && pluginsOptions.cookieVersion !== '')
-  ) ? true : false;
-   
-  if(activePlugin)
+  
+  if(pluginsOptions.gtagIdentifiant !== '' || 
+  (pluginsOptions.axpetioIdentifiant !== '' && pluginsOptions.cookieVersion !== ''))
   {
     const scriptIntegrateAxeptio = (pluginsOptions.gtagIdentifiant !== '') ? `
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
