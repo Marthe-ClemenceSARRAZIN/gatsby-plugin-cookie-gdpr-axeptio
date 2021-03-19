@@ -3,16 +3,16 @@ on:
   push:
     branches: ['master']
 jobs:
-  run-npm-build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: npm install and build webpack
-        run: |
-          npm install
-          npm run build
+  # run-npm-build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: npm install and build webpack
+  #       run: |
+  #         npm install
+  #         npm run build
   publish-npm:
-    needs: run-npm-build
+    # needs: run-npm-build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: 15
           registry-url: https://registry.npmjs.org/
+      - run: npm install
       - run: npm run build
       - run: npm publish --access public
         env:
