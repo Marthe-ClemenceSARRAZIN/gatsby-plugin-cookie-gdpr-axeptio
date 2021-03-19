@@ -7,20 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: npm run build
+      - name: npm install and build webpack
+        run: |
+          npm install
+          npm run build
+      # - uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 12
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
-      # - name: npm install and build webpack
-      #   run: |
-      #     npm install
-      #     npm run build
-      #     npm publish --tag ${{ github.event.release.target_commitish }}
-      #   env: NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      # - uses: actions/upload-artifact@master
-      #   with:
-      #     name: webpack artifacts
-      #     path: public/
