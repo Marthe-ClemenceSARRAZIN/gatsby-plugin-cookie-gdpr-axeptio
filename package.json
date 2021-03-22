@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cellenza/gatsby-plugin-cookie-gdpr-axeptio.git"
+    "url": "git+https://github.com/Marthe-ClemenceSARRAZIN/gatsby-plugin-cookie-gdpr-axeptio.git"
   },
   "keywords": [
     "gatsby",
@@ -21,9 +21,9 @@
   "author": "Marthe-Clémence SARRAZIN",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Cellenza/gatsby-plugin-cookie-gdpr-axeptio/issues"
+    "url": "https://github.com/Marthe-ClemenceSARRAZIN/gatsby-plugin-cookie-gdpr-axeptio/issues"
   },
-  "homepage": "https://github.com/Cellenza/gatsby-plugin-cookie-gdpr-axeptio#readme",
+  "homepage": "https://github.com/Marthe-ClemenceSARRAZIN/gatsby-plugin-cookie-gdpr-axeptio#readme",
   "peerDependencies": {
     "gatsby": "^3.0.2"
   },

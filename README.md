@@ -14,7 +14,7 @@ Plugin gastby for integrate gdpr solution cookie with axeptio
 Please include installation instructions here.
 Gatsby documentation uses `npm` for installation. 
 
-> npm i gastby-test-plugin-publish
+> npm i gatsby-plugin-cookie-gdpr-axeptio
 
 ## When do I use this plugin?
 When i want include a new gdpr cookie UE with Axeptio
